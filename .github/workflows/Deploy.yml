@@ -18,6 +18,7 @@ jobs:
         with:
           name: ${{ inputs.name }}
           path: publish
+      - run: echo ${{ inputs.name }}
 
       - run: |
           powershell -Command "Remove-Item 'D:\github artifact repo\*' -Recurse -Force -ErrorAction SilentlyContinue"
