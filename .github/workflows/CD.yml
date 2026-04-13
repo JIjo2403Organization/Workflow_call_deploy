@@ -1,0 +1,28 @@
+name: CD
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact
+        uses: JIjo2403Organization/GitHub_Task/.github/actions/Download_Artifact@main
+        with:
+          name: build-artifact   # fixed name
+
+      - name: Create Deployment Folder
+        run: mkdir deployed-folder
+
+      - name: Copy Files
+        run: |
+          for file in *; do
+            if [ "$file" != "deployed-folder" ]; then
+              cp -r "$file" deployed-folder/
+            fi
+          done
+
+      - name: Display Files
+        run: ls deployed-folder
