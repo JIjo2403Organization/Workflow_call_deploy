@@ -11,9 +11,9 @@ jobs:
 
     steps:
       - name: Download All Artifacts
-        uses: ./.github/actions/Download_Artifact
+        #uses: ./.github/actions/Download_Artifact
 
-       # uses: Jijo2403Organization/GitHub_Task2/.github/actions/Download_Artifact@main
+        uses: Jijo2403Organization/GitHub_Task2/.github/actions/Download_Artifact@main
 
       - name: Show Files
         run: ls -R
