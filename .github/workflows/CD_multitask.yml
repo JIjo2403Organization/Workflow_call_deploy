@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    #  - name: Checkout Repository
+        #uses: actions/checkout@v4
 
       - name: Download All Artifacts
         uses: Jijo2403Organization/GitHub_Task2/.github/actions/Download_Artifact@main
