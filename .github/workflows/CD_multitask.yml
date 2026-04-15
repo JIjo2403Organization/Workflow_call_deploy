@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Download All Artifacts
-        uses: .github/actions/Download_Artifact
+        uses: ./.github/actions/Download_Artifact
 
       - name: Show Files
         run: ls -R
