@@ -1,14 +1,8 @@
 name: Download Artifact
-description: Download build files
-
-inputs:
-  name:
-    required: true
+description: Download all build files
 
 runs:
   using: "composite"
   steps:
     - name: Download
       uses: actions/download-artifact@v4
-      with:
-        name: ${{ inputs.name }}
