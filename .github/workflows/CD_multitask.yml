@@ -1,12 +1,13 @@
 name: CD - Deploy
 
+name: CD - Deploy
+
 on:
   workflow_call:
-    inputs:
+    inputs:   
       version:
-        required: false
+        required: true
         type: string
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
