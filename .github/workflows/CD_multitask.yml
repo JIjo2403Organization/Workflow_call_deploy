@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
+      - name: Show Build Version
+        run: |
+          echo "Deploying version: ${{ inputs.version }}"
 
       - name: Download All Artifacts
         uses: Jijo2403Organization/GitHub_Task2/.github/actions/Download_Artifact@main
